@@ -1,11 +1,10 @@
-function binarySearch(list, element) {
+function binarySearch(list, element) { //Requires a sorted list but that is handled in the test
     //Skip the search if the list is empty
     if (list.length === 0) { return -1}
     
     //Now search
     let left = 0;
     let right = list.length - 1;
-
     while (left <= right) {
         let middle = Math.floor((left + right) / 2);
         if (list[middle] < element) {
