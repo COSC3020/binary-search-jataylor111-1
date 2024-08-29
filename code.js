@@ -12,7 +12,12 @@ function binarySearch(list, element) { //Requires a sorted list but that is hand
         } else if (list[middle] > element) {
             right = middle - 1;
         } else {
-            return 0;
+            //In instances where the list contains all the same number then it would get tripped up so I used this if/else to compensate 
+            if (list[0] == element) {
+                return 0;
+            } else {
+                return middle;
+            }        
         }
     }
 
